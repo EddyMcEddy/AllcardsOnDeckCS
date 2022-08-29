@@ -1,4 +1,4 @@
-# AllcardsOnDeckCS
+# AllCardsOnDeckCS
 
 ## To push to github
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AllcardsOnDeckCS
+namespace AllCardsOnDeckCS
 {
   class Program
   {

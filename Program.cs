@@ -7,6 +7,7 @@ namespace AllCardsOnDeckCS
     {
         static void Main(string[] args)
         {
+            //Create a deck of cards
             var deck = new List<string>()
             {
                 "Ace of Hearts",
@@ -62,22 +63,24 @@ namespace AllCardsOnDeckCS
                 "Queen of Diamonds",
                 "King of Diamonds"
             };
-
+            // count the total cards in our list and assign it number Of Cards
             var numberOfCards = deck.Count;
-            // var rightIndex = numberOfCards - 1;
-
+            //Shuffling by grabbing the last card and shuffling it randomly with another card
             for (var rightIndex = numberOfCards - 1; rightIndex >= 1; rightIndex--)
             {
+                // the method Random() and Next() help randomize the deck
                 var randomNumberGenerator = new Random();
                 var leftIndex = randomNumberGenerator.Next(rightIndex);
-
+                // telling the code that the left side of the deck a left card will be
+                //chosen from that side
                 var leftCard = deck[leftIndex];
                 var rightCard = deck[rightIndex];
 
                 deck[rightIndex] = leftCard;
                 deck[leftIndex] = rightCard;
             }
-
+            //Grabbing a card from the left side of the index
+            //Grabbing a second card from the right side of the index
             var firstCard = deck[0];
             var secondCard = deck[1];
             Console.WriteLine(
